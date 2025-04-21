@@ -1,0 +1,216 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --red: hsl(0, 100%, 67%);
+  --White: hsl(0, 100%, 100%);
+  --Grey-100: hsl(0, 0%, 94%);
+  --Grey-200: hsl(0, 0%, 86%);
+  --Grey-500: hsl(0, 1%, 44%);
+  --Black: hsl(0, 0%, 0%);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(/assets/fonts/Poppins-Regular.ttf) format(woff2);
+  
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(/assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-BoldItalic";
+  src: url(/assets/fonts/Poppins-BoldItalic.ttf);
+}
+@font-face {
+  font-family: "Poppins-ExtraBold";
+  src: url(/assets/fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Italic";
+  src: url(/assets/fonts/Poppins-Italic.ttf);
+}
+
+/* main css starts */
+body {
+  background-color: var(--Grey-200);
+  margin: auto;
+  padding: 1rem 1rem;
+}
+.main-container {
+  position: relative;
+  background-color: var(--White);
+  height: 80vh;
+  padding: 3rem 2rem 1rem 2rem;
+  border-radius: 0 0 2rem 0;
+}
+.input-container-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  font-family: "Poppins";
+  padding-bottom: 2rem;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  font-family: 'Poppins-Bold';
+}
+.label-day, .label-month, .label-year {
+  color: var(--Grey-500);
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+}
+input {
+  font-family: 'Poppins-Bold';
+  border-radius: 0.5rem;
+  border: 0.1rem var(--Grey-100) solid;
+  padding: 1rem;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+  cursor: pointer;
+}
+input:focus{
+  border: 0.1rem var(--purple) solid !important;
+  box-shadow: 0 0 5px var(--purple) !important;
+}
+/* error state style */
+.error-message-day, .error-message-month, .error-message-year{
+  color: var(--red);
+  font: 0.75rem 'Poppins';
+  display: none;
+}
+#day.error, #month.error, #year.error{
+  color: var(--red);
+}
+.label-day.error, .label-month.error, .label-year.error{
+  color: var(--red);
+}
+.error-message-day.show, .error-message-month.show, .error-message-year.show{
+  display: block;
+}
+.error-invalid-day, .error-invalid-month, .error-invalid-year{
+  color: var(--red);
+  font: 0.75rem 'Poppins';
+  display: none;
+}
+.error-invalid-day.show,.error-invalid-month.show, .error-invalid-year.show{
+  display: block;
+}
+/* error state style end */
+.submit-button-container {
+  position: absolute;
+  left: 12rem;
+  z-index: 999;
+}
+button {
+  background-color: var(--purple);
+  border: none;
+  border-radius: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--Black);
+  border-radius: 3rem;
+}
+.line {
+  position: absolute;
+  top: 13rem;
+  width: 80vw;
+  padding: 0.1rem;
+  background-color: var(--Grey-100);
+}
+.output {
+  display: flex;
+  flex-direction: column;
+  gap: -1rem;
+  padding-top: 7rem;
+  font-family: "Poppins-BoldItalic";
+  font-size: 4rem;
+}
+.output span {
+  color: var(--purple);
+}
+
+/* mobile small */
+@media screen and (max-width: 425px ) {
+  .main-container {
+    position: relative;
+    background-color: var(--White);
+    height: max-content;
+    width: 22rem;
+    padding: 3rem 2rem 1rem 2rem;
+    border-radius: 0 0 4rem 0;
+  }
+  .line {
+    position: absolute;
+    top: 13rem;
+    width: 23rem;
+    padding: 0.1rem;
+    background-color: var(--Grey-100);
+  }
+  .submit-button-container {
+    position: absolute;
+    left: 10.5rem;
+    z-index: 999;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 767px ){
+  body{
+padding-top: 0rem;
+  }
+  .main-container {
+    position: relative;
+    background-color: var(--White);
+    height: max-content;
+    border-radius: 0 0 4rem 0;
+  }
+  .input-container {
+    width: 20vw;
+  }
+  .submit-button-container {
+    left: 36rem;
+    z-index: 999;
+  }
+  .output {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 1024px ){
+  body{
+    padding-top: 0rem;
+  }
+  .submit-button-container {
+    left: 53rem;
+    z-index: 999;
+  }
+  .output {
+    font-family: "Poppins-BoldItalic";
+    font-size: 8rem;
+  }
+}
+@media screen and (min-width: 1440px ){
+  body{
+    padding-top: 0rem;
+  }
+  .main-container {
+    position: relative;
+    background-color: var(--White);
+    height: max-content;
+    border-radius: 0 0 4rem 0;
+  }
+  .submit-button-container {
+    left: 74rem;
+    z-index: 999;
+  }
+}
+@media screen and (min-width: 2560px ){
+  .submit-button-container {
+    left: 130rem;
+    z-index: 999;
+  }
+}
