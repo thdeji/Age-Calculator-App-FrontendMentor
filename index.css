@@ -9,24 +9,24 @@
 }
 @font-face {
   font-family: "Poppins";
-  src: url(/assets/fonts/Poppins-Regular.ttf) format(woff2);
+  src: url(./Poppins-Regular.ttf) format(woff2);
   
 }
 @font-face {
   font-family: "Poppins-Bold";
-  src: url(/assets/fonts/Poppins-Bold.ttf);
+  src: url(./Poppins-Bold.ttf);
 }
 @font-face {
   font-family: "Poppins-BoldItalic";
-  src: url(/assets/fonts/Poppins-BoldItalic.ttf);
+  src: url(./Poppins-BoldItalic.ttf);
 }
 @font-face {
   font-family: "Poppins-ExtraBold";
-  src: url(/assets/fonts/Poppins-ExtraBold.ttf);
+  src: url(./Poppins-ExtraBold.ttf);
 }
 @font-face {
   font-family: "Poppins-Italic";
-  src: url(/assets/fonts/Poppins-Italic.ttf);
+  src: url(./Poppins-Italic.ttf);
 }
 
 /* main css starts */
